@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprunki Phase 5: Ultimate Rhythm Game | Play Incredibox Sprunki Phase 5</title>
+    <meta name="description" content="Experience Sprunki Phase 5, the latest evolution of the Incredibox rhythm game series. Master advanced beats, create music, and challenge yourself in Sprunki Phase 5's innovative gameplay.">
+    <link rel="icon" type="image/png" href="1.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+        
+        :root {
+            --neon-text-color: #f40;
+            --neon-border-color: #08f;
+        }
+        
+        body {
+            font-family: 'Audiowide', cursive;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            text-shadow: 0 0 5px #fff, 0 0 10px var(--neon-text-color);
+        }
+        .hero {
+            background: url('https://source.unsplash.com/random/1600x900?concert') no-repeat center center;
+            background-size: cover;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 1;
+        }
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3em;
+            animation: gentleGlow 4s ease-in-out infinite alternate;
+        }
+        @keyframes gentleGlow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px var(--neon-text-color);
+            }
+            to {
+                text-shadow: 0 0 5px #fff, 0 0 10px var(--neon-text-color), 0 0 15px var(--neon-border-color);
+            }
+        }
+        .game-container {
+            width: 100%;
+            height: 600px;
+            margin: 20px 0;
+            border: 4px solid var(--neon-border-color);
+            box-shadow: 0 0 20px var(--neon-border-color);
+            animation: borderPulse 2s infinite;
+        }
+        @keyframes borderPulse {
+            0% { box-shadow: 0 0 20px var(--neon-border-color); }
+            50% { box-shadow: 0 0 40px var(--neon-border-color), 0 0 60px var(--neon-border-color); }
+            100% { box-shadow: 0 0 20px var(--neon-border-color); }
+        }
+        .section {
+            background-color: rgba(20, 20, 20, 0.8);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid var(--neon-border-color);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 20px,
+                rgba(255, 255, 255, 0.1) 20px,
+                rgba(255, 255, 255, 0.1) 40px
+            );
+            animation: moveLines 10s linear infinite;
+        }
+        @keyframes moveLines {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(40px); }
+        }
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px var(--neon-border-color);
+        }
+        .review {
+            background-color: rgba(40, 40, 40, 0.8);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 3px solid var(--neon-text-color);
+        }
+        .faq {
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .faq h3 {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .faq h3:hover {
+            color: var(--neon-text-color);
+        }
+        .faq p {
+            display: none;
+            padding-left: 20px;
+            border-left: 2px solid var(--neon-text-color);
+        }
+        .neon-nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .neon-nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .neon-nav li {
+            margin: 0 15px;
+        }
+        .neon-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        .neon-nav a:hover {
+            color: var(--neon-text-color);
+            text-shadow: 0 0 5px var(--neon-text-color), 0 0 10px var(--neon-text-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="neon-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../music-games.html">Music Games</a></li>
+            <li><a href="sprunki-phase-3.html">Phase 3</a></li>
+            <li><a href="sprunki-phase-4.html">Phase 4</a></li>
+            <li><a href="sprunki-phase-5.html" class="active">Phase 5</a></li>
+            <li><a href="sprunki-phase-6.html">Phase 6</a></li>
+            <li><a href="sprunki-phase-7.html">Phase 7</a></li>
+            <li><a href="sprunki-phase-10.html">Phase 10</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Sprunki Phase 5: The Evolution of Rhythm Gaming</h1>
+    </div>
+
+    <div class="container">
+        <div class="game-container">
+            <iframe src="https://iframegame.com/embed/sprunki-phase-5/index.html" style="width: 100%; height: 100%;" frameborder="0" allowfullscreen title="Play Sprunki Phase 5 Online"></iframe>
+        </div>
+
+        <div class="section">
+            <h2>Discover the Magic of Sprunki Phase 5</h2>
+            <p>Welcome to the official Sprunki Phase 5 gaming portal, where rhythm meets innovation. This latest iteration has revolutionized the music gaming landscape with its groundbreaking features and immersive gameplay. As the most advanced version in the series, this release delivers an experience that both casual players and professionals have been waiting for.</p>
+            
+            <p>Building on the success of previous versions, this rhythm game introduces sophisticated pattern recognition systems and advanced musical composition tools. Players can explore multiple gameplay modes, each offering unique challenges and opportunities for musical expression.</p>
+        </div>
+
+        <div class="section">
+            <h2>The Complete Sprunki Phase 5 Experience</h2>
+            <p>The game introduces several revolutionary features that set it apart from other rhythm games:</p>
+            <ul>
+                <li>Beat Laboratory: Create and share unique rhythms using the advanced pattern system</li>
+                <li>Enhanced Multiplayer Mode: Collaborate with players worldwide in real-time music creation</li>
+                <li>Comprehensive Tutorial System: Perfect for both beginners and experts</li>
+                <li>Professional Tournament Mode: Compete against the best players globally</li>
+                <li>Custom Practice Modes: Develop your skills at your own pace with adaptive difficulty</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Advanced Musical Innovation in Sprunki Phase 5</h2>
+            <p>The musical innovation in this version reaches new heights with:</p>
+            <ul>
+                <li>Dynamic Beat Generation: Advanced algorithms create unique patterns based on your playing style</li>
+                <li>Multi-layered Composition: Create complex musical pieces with up to 16 simultaneous tracks</li>
+                <li>Real-time Audio Processing: Zero-latency sound system for precise rhythm matching</li>
+                <li>Professional Sound Library: Access thousands of high-quality samples and instruments</li>
+                <li>Custom Sound Import: Bring your own samples to create truly unique compositions</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Professional Features in Sprunki Phase 5</h2>
+            <p>Professional musicians and competitive players will appreciate these advanced features:</p>
+            <ul>
+                <li>MIDI Controller Support: Full integration with professional music equipment</li>
+                <li>Advanced Performance Analytics: Detailed statistics and performance tracking</li>
+                <li>Custom Pattern Creation: Design and share your own rhythm patterns</li>
+                <li>Professional Recording Studio: Built-in tools for music production</li>
+                <li>Tournament Organization Tools: Host and manage your own competitions</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Community and Social Features</h2>
+            <p>The Sprunki Phase 5 community grows stronger every day, offering:</p>
+            <ul>
+                <li>Global Leaderboards: Compete with players worldwide</li>
+                <li>Community Challenges: Weekly events with unique themes and rewards</li>
+                <li>Pattern Sharing Platform: Exchange custom-created patterns</li>
+                <li>Collaborative Projects: Work together on musical masterpieces</li>
+                <li>Social Integration: Share your achievements on various platforms</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Technical Excellence</h2>
+            <p>The development team behind Sprunki Phase 5 has implemented cutting-edge technology to ensure the best possible gaming experience. Every aspect has been optimized for performance, from the responsive controls to the crystal-clear audio processing. The game engine features advanced synchronization algorithms that maintain perfect timing across all devices.</p>
+        </div>
+
+        <div class="section">
+            <h2>Educational Value</h2>
+            <p>Beyond entertainment, Sprunki Phase 5 serves as an educational tool for understanding rhythm and music theory. The comprehensive tutorial system guides players through concepts like:</p>
+            <ul>
+                <li>Rhythm Pattern Recognition</li>
+                <li>Time Signatures and Tempo</li>
+                <li>Musical Composition Basics</li>
+                <li>Sound Design Fundamentals</li>
+                <li>Performance Techniques</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <h3>What makes Sprunki Phase 5 unique?</h3>
+                <p>The experience combines advanced rhythm mechanics with innovative gameplay features, creating an unmatched musical gaming experience with professional-grade tools.</p>
+            </div>
+            <div class="faq">
+                <h3>How does the multiplayer mode work?</h3>
+                <p>Players can collaborate in real-time, creating complex musical compositions together or competing in various challenge modes.</p>
+            </div>
+            <div class="faq">
+                <h3>What are the system requirements?</h3>
+                <p>The game is optimized to run smoothly on most modern devices while maintaining professional-grade audio processing capabilities.</p>
+            </div>
+            <div class="faq">
+                <h3>How often are new features added?</h3>
+                <p>The development team regularly releases updates with new features, patterns, and community-requested improvements.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Start Your Musical Journey in Sprunki Phase 5</h2>
+            <p>Whether you're a casual rhythm game enthusiast or a professional musician, this game offers an experience that grows with you. Join the global community today and discover why players worldwide consider it the ultimate rhythm gaming experience.</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq h3').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
